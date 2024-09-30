@@ -1,0 +1,23 @@
+---
+- name: Install EPEL repository
+  ansible.builtin.yum:
+    name: epel-release
+    state: present
+  become: true
+
+- name: Install Nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: present
+  become: true
+
+- name: Configure Nginx
+  ansible.builtin.debug:
+    msg: "Configure nginx..."
+
+- name: Start nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true
+  become: true

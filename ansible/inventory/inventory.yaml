@@ -1,0 +1,7 @@
+ungrouped:
+  hosts:
+    webserver:
+      ansible_host: 192.168.122.182
+      ansible_user: artem
+      ansible_ssh_private_key_file: /home/artem/Desktop/vm_ssh/id_rsa
+      ansible_become_pass: 1111
